@@ -14,7 +14,7 @@ jobs:
     CD:
         needs: [CI]
         uses: diogofiaminghi/devops-pro-reaproveitamento-workflows/.github/workflows/cd.yml@main
-        with:
-            ambiente: producao
-        
+        secrets:
+            ambiente: ${{ secrets.AMBIENTE_ENTREGA }}
+            
         
